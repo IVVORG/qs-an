@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) 2023-present unTill Pro, Ltd.
+ * @author: Victor Istratenko
+ */
 package git
 
 import (
