@@ -5,10 +5,8 @@
 package main
 
 import (
-	"strings"
 	"testing"
 
-	"github.com/atotto/clipboard"
 	"github.com/stretchr/testify/assert"
 )
 
