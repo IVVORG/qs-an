@@ -1184,7 +1184,7 @@ func fillPreCommitFile(filepath string) {
 	_, err = f.WriteString(hookcode)
 	gochips.ExitIfError(err)
 
-	cmd := exec.Command("bash", "-c", "chmod +x "+filepath)
+	555cmd := exec.Command("bash", "-c", "chmod +x "+filepath)
 	err = cmd.Run()
 	gochips.ExitIfError(err)
 }
