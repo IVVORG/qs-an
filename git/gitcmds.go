@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) 2023-present unTill Pro, Ltd.
+ * @author: Victor Istratenko
+ */
 package git
 
 import (
@@ -1184,3 +1188,11 @@ func fillPreCommitFile(filepath string) {
 	err = cmd.Run()
 	gochips.ExitIfError(err)
 }
+
+
+
+
+
+
+
+

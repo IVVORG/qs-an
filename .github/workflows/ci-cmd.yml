@@ -1,7 +1,7 @@
 name: CI cmd
 
 on:
-  pull_request_target:
+  push:
     paths:
       - 'git/**'
 
@@ -18,9 +18,6 @@ jobs:
 
     - name: Checkout
       uses: actions/checkout@v3
-      with:
-        ref: ${{ github.event.pull_request.head.sha }}
-        fetch-depth: 0      
 
     - name: Cache Go - Modules
       uses: actions/cache@v3

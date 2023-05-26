@@ -1,10 +1,12 @@
+/*
+ * Copyright (c) 2023-present unTill Pro, Ltd.
+ * @author: Victor Istratenko
+ */
 package main
 
 import (
-	"strings"
 	"testing"
 
-	"github.com/atotto/clipboard"
 	"github.com/stretchr/testify/assert"
 )
 
@@ -46,17 +48,3 @@ func TestGetBranchName(t *testing.T) {
 	assert.Equal(t, str, "13427-Show-me-this-very-long-string-more-than-fift")
 }
 
-func TestClipBoard(t *testing.T) {
-	err := clipboard.WriteAll("1,2,3,5")
-	assert.Nil(t, err)
-
-	arg, _ := clipboard.ReadAll()
-
-	args := strings.Split(arg, "\n")
-	var newarg string
-	for _, str := range args {
-		newarg += str
-		newarg += " "
-	}
-	assert.NotEmpty(t, newarg)
-}

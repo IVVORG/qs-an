@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) 2023-present unTill Pro, Ltd.
+ * @author: Victor Istratenko
+ */
 package vcs
 
 // CfgUpload defines upload command config
