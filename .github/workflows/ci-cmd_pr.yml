@@ -22,6 +22,13 @@ jobs:
         ref: ${{ github.event.pull_request.head.sha }}
         fetch-depth: 0      
 
+    - name: Get branch information
+      run: |
+        BRANCH_NAME=$(jq --raw-output .pull_request.head.ref $GITHUB_EVENT_PATH)
+        UPSTREAM_BRANCH=$(jq --raw-output .pull_request.base.ref $GITHUB_EVENT_PATH)
+        git fetch origin $UPSTREAM_BRANCH
+        git diff --quiet $UPSTREAM_BRANCH..$BRANCH_NAME || echo "Branch is behind upstream"
+
     - name: Cache Go - Modules
       uses: actions/cache@v3
       with:
