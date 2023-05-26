@@ -1184,3 +1184,5 @@ func fillPreCommitFile(filepath string) {
 	err = cmd.Run()
 	gochips.ExitIfError(err)
 }
+
+
